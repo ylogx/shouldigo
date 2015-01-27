@@ -4,4 +4,5 @@ from weathercheck import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
+    url(r'today/', views.today, name='today'),
 )
