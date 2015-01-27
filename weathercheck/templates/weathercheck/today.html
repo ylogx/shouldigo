@@ -1,22 +1,30 @@
-{% if ip %}
-    <p>Your IP address is {{ ip }} </p>
-{% else %}
-    <p>No ip address detected</p>
-{% endif %}
-</br>
+{% extends 'base.html' %}
 
-{% if city %}
-    <p>City detected is {{ city }} </p>
-{% else %}
-    <p>Couldn't locate your city</p>
-{% endif %}
-</br>
+{% block title %}Weather Check{% endblock %}
 
-{% if weather %}
-    <p>Weather is : {{ weather }} </p>
-{% else %}
-    <p>Can't find your weather details</p>
-{% endif %}
-</br>
+{% block body_block %}
+    <center>
+        {% if ip %}
+            <p>Your IP address is <b>{{ ip }}</b> </p>
+        {% else %}
+            <p>No ip address detected</p>
+        {% endif %}
+        </br>
+
+        {% if city %}
+            <p>City detected is <b>{{ city }}</b> </p>
+        {% else %}
+            <p>Couldn't locate your city</p>
+        {% endif %}
+        </br>
+
+        {% if weather %}
+            <p>Weather is : <b>{{ weather }}</b> </p>
+        {% else %}
+            <p>Can't find your weather details</p>
+        {% endif %}
+        </br>
+    </center>
+{% endblock %}
 
 
