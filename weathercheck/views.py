@@ -14,11 +14,8 @@ def today(request):
     ip = get_ip(request)
     location = get_location(ip)
     weather = weather_check(location)
-    out = 'Your location is %s and your ip is %s'%(location, ip)
-    out += '</br>'
-    out += 'Weather around you is: ' + weather
-    return HttpResponse(out)
-
+    context = {'ip': ip, 'location': location, 'weather': weather}
+    return render(request, 'weathercheck/today.html', context)
 
 def request_json(url):
     ''' Send a urllib request for json item

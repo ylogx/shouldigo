@@ -1,0 +1,22 @@
+{% if ip %}
+    <p>Your IP address is {{ ip }} </p>
+{% else %}
+    <p>No ip address detected</p>
+{% endif %}
+</br>
+
+{% if city %}
+    <p>City detected is {{ city }} </p>
+{% else %}
+    <p>Couldn't locate your city</p>
+{% endif %}
+</br>
+
+{% if weather %}
+    <p>Weather is : {{ weather }} </p>
+{% else %}
+    <p>Can't find your weather details</p>
+{% endif %}
+</br>
+
+
