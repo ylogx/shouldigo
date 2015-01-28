@@ -26,6 +26,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = [
         '.heroku.com',
+        '.herokuapp.com',
         'localhost',
         ]
 
