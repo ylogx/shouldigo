@@ -24,7 +24,7 @@ class Checker:
         ''' Get the current location of user via ip-api
         '''
         if ip == '127.0.0.1':
-            return 'Delhi'  #FIXME: Use some other location
+            return 'NYC'  #FIXME: Use some other location
         url = 'http://ip-api.com/json/' + ip
         json_dict = self._request_json(url)
         city = ''   #FIXME: Fatal, need backup method

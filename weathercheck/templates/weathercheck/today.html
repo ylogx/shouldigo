@@ -19,11 +19,15 @@
 
         {% if weather %}
             <p>Weather is <b>{{ weather }}</b> </p>
-            {% if weather == 'Clear' %}
-                <font color=black><center> <h1>Come on, Go Out</h1> </center> </font>
+            <font color=brown><center> <h1>
+            {% if weather == 'Clear'  %}
+                Come on, Go Out
+            {% elif weather == 'Clouds' %}
+                Take that jacket with you
             {% elif weather == 'Rainy' %}
-                <font color=black><center> <h1>Better pack that umbrella</h1> </center> </font>
+                Better pack that umbrella
             {% endif %}
+            </h1> </center> </font>
         {% else %}
             <p>Can't find your weather details</p>
         {% endif %}
