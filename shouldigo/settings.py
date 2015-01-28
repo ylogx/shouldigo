@@ -25,8 +25,9 @@ SECRET_KEY = 'bfl95*%$k6g%7ui@vn8w4054#+qqj-xen!^ra@v!ap51d#w4zs'
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = [
-        '.heroku.com',
-        '.herokuapp.com',
+        '.herokuapp.com',   # Allow domain and sub-domains
+        '.herokuapp.com.',  # Allow FQDN and sub-domains
+        '.heroku.com', '.heroku.com.',
         'localhost',
         ]
 
