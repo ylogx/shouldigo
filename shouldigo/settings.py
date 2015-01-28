@@ -24,7 +24,10 @@ SECRET_KEY = 'bfl95*%$k6g%7ui@vn8w4054#+qqj-xen!^ra@v!ap51d#w4zs'
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+        '.heroku.com',
+        'localhost',
+        ]
 
 
 # Application definition
