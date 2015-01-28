@@ -16,8 +16,11 @@ class Checker:
         #TODO: Use country in location below
         url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location
         json_dict = self._request_json(url)
-        output = json_dict['weather']
-        output = output[0]['main']
+        try:
+            output = json_dict['weather']
+            output = output[0]['main']
+        except KeyError:
+            output = None
         return output
 
     def get_location(self, ip):
