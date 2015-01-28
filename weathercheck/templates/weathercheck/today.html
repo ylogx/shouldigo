@@ -18,7 +18,12 @@
         {% endif %}
 
         {% if weather %}
-            <p>Weather is : <b>{{ weather }}</b> </p>
+            <p>Weather is <b>{{ weather }}</b> </p>
+            {% if weather == 'Clear' %}
+                <font color=black><center> <h1>Come on, Go Out</h1> </center> </font>
+            {% elif weather == 'Rainy' %}
+                <font color=black><center> <h1>Better pack that umbrella</h1> </center> </font>
+            {% endif %}
         {% else %}
             <p>Can't find your weather details</p>
         {% endif %}
